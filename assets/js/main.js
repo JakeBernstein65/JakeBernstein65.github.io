@@ -1,24 +1,18 @@
 /*
-	Strongly Typed by HTML5 UP
+	Prologue by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function($) {
 
-	skel
-		.breakpoints({
-			desktop: '(min-width: 737px)',
-			tablet: '(min-width: 737px) and (max-width: 1200px)',
-			mobile: '(max-width: 736px)'
-		})
-		.viewport({
-			breakpoints: {
-				tablet: {
-					width: 1080
-				}
-			}
-		});
+	skel.breakpoints({
+		wide: '(min-width: 961px) and (max-width: 1880px)',
+		normal: '(min-width: 961px) and (max-width: 1620px)',
+		narrow: '(min-width: 961px) and (max-width: 1320px)',
+		narrower: '(max-width: 960px)',
+		mobile: '(max-width: 736px)'
+	});
 
 	$(function() {
 
@@ -32,6 +26,10 @@
 				$body.removeClass('is-loading');
 			});
 
+		// CSS polyfills (IE<9).
+			if (skel.vars.IEVersion < 9)
+				$(':last-child').addClass('last-child');
+
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
@@ -43,37 +41,63 @@
 				);
 			});
 
-		// CSS polyfills (IE<9).
-			if (skel.vars.IEVersion < 9)
-				$(':last-child').addClass('last-child');
+		// Scrolly links.
+			$('.scrolly').scrolly();
 
-		// Dropdowns.
-			$('#nav > ul').dropotron({
-				mode: 'fade',
-				noOpenerFade: true,
-				hoverDelay: 150,
-				hideDelay: 350
-			});
+		// Nav.
+			var $nav_a = $('#nav a');
 
-		// Off-Canvas Navigation.
+			// Scrolly-fy links.
+				$nav_a
+					.scrolly()
+					.on('click', function(e) {
 
-			// Title Bar.
+						var t = $(this),
+							href = t.attr('href');
+
+						if (href[0] != '#')
+							return;
+
+						e.preventDefault();
+
+						// Clear active and lock scrollzer until scrolling has stopped
+							$nav_a
+								.removeClass('active')
+								.addClass('scrollzer-locked');
+
+						// Set this link to active
+							t.addClass('active');
+
+					});
+
+			// Initialize scrollzer.
+				var ids = [];
+
+				$nav_a.each(function() {
+
+					var href = $(this).attr('href');
+
+					if (href[0] != '#')
+						return;
+
+					ids.push(href.substring(1));
+
+				});
+
+				$.scrollzer(ids, { pad: 200, lastHack: true });
+
+		// Header (narrower + mobile).
+
+			// Toggle.
 				$(
-					'<div id="titleBar">' +
-						'<a href="#navPanel" class="toggle"></a>' +
+					'<div id="headerToggle">' +
+						'<a href="#header" class="toggle"></a>' +
 					'</div>'
 				)
 					.appendTo($body);
 
-			// Navigation Panel.
-				$(
-					'<div id="navPanel">' +
-						'<nav>' +
-							$('#nav').navList() +
-						'</nav>' +
-					'</div>'
-				)
-					.appendTo($body)
+			// Header.
+				$('#header')
 					.panel({
 						delay: 500,
 						hideOnClick: true,
@@ -82,12 +106,12 @@
 						resetForms: true,
 						side: 'left',
 						target: $body,
-						visibleClass: 'navPanel-visible'
+						visibleClass: 'header-visible'
 					});
 
-			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
+			// Fix: Remove transitions on WP<10 (poor/buggy performance).
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-					$('#titleBar, #navPanel, #page-wrapper')
+					$('#headerToggle, #header, #main')
 						.css('transition', 'none');
 
 	});

@@ -1,14 +1,24 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
+@import 'libs/skel';
 
 /*
-	Strongly Typed by HTML5 UP
+	Prologue by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Basic */
+/* Section/Article */
+
+	section, article {
+		> .last-child,
+		&.last-child {
+			margin-bottom: 0;
+		}
+	}
+
+/* Form */
 
 	form {
 		input[type="text"],
@@ -16,37 +26,49 @@
 		input[type="password"],
 		select,
 		textarea {
-			position: relative;
 			-ms-behavior: url('assets/js/ie/PIE.htc');
 		}
 	}
+
+/* Button */
 
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
 	button,
 	.button {
-		position: relative;
 		-ms-behavior: url('assets/js/ie/PIE.htc');
 	}
 
-	.button, .box.excerpt .date {
-		position: relative;
-		-ms-behavior: url('assets/js/ie/PIE.htc');
-	}
+/* Header */
 
-/* Sections/Article */
+	#nav {
+		ul {
+			li {
+				a {
+					color: #888;
 
-	section, article {
-		> .last-child, &.last-child {
-			margin-bottom: 0;
+					&.active {
+						background: #1C2022;
+					}
+				}
+			}
 		}
 	}
 
-/* Wrappers */
+	#headerToggle {
+		.toggle {
+			background-color: #888;
+		}
+	}
 
-	#banner-wrapper {
-		.inner {
-			-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+/* Main */
+
+	#main {
+		> section {
+			&.cover {
+				background-position: auto;
+				-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+			}
 		}
 	}
