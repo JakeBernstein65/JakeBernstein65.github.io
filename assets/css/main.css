@@ -1954,6 +1954,8 @@
 
 	.icon {
 		text-decoration: none;
+		margin-left: 148px;
+		float: left;
 	}
 
 		.icon:before {
@@ -1971,6 +1973,18 @@
 		.icon > .label {
 			display: none;
 		}
+
+	.second-icon {
+
+	}
+
+	.fourth-icon {
+		margin-left: 198px;
+	}
+
+	.sixth-icon {
+		margin-left: 291px;
+	}
 
 /* Header */
 
