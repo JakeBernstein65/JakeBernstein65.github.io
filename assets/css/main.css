@@ -1954,8 +1954,6 @@
 
 	.icon {
 		text-decoration: none;
-		margin-left: 148px;
-		float: left;
 	}
 
 		.icon:before {
@@ -1973,6 +1971,11 @@
 		.icon > .label {
 			display: none;
 		}
+
+	.skill-icon {
+		margin-left: 148px;
+		float: left;
+	}
 
 	.second-icon {
 
