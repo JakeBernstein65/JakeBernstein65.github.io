@@ -2266,6 +2266,12 @@
 				margin-bottom: 20px;
 			}
 
+		/* Work Info */
+
+			.work-info {
+				/*overflow: scroll;*/
+			}
+
 		/* Header */
 
 			#header {
