@@ -16,6 +16,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
+		color: black;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1615,7 +1616,9 @@
 	}
 
 		header > p {
-			margin: 1em 0 0 0;
+    		margin: 1em 0 0 0;
+    		padding-left: 10px;
+    		padding-right: 10px;
 		}
 
 	footer {
@@ -1742,6 +1745,13 @@
 				margin: 0 auto;
 				width: auto;
 			}
+
+/* Fit */
+
+	.fit img {
+    	max-width: 100%;
+    	max-height: 289px;
+	}
 
 /* List */
 
@@ -1973,20 +1983,26 @@
 		}
 
 	.skill-icon {
-		margin-left: 148px;
+		margin-left: 194px;
 		float: left;
+		padding-bottom: 14px;
+	}
+
+	.skill-text {
+		clear: left;
+		padding-bottom: 30px;
 	}
 
 	.second-icon {
-
+		margin-left: 203px
 	}
 
 	.fourth-icon {
-		margin-left: 198px;
+		margin-left: 36px;
 	}
 
 	.sixth-icon {
-		margin-left: 291px;
+		margin-left: 356px;
 	}
 
 /* Header */
@@ -2154,7 +2170,7 @@
 			}
 
 				#main > section.dark h2, #main > section.dark h3, #main > section.dark h4, #main > section.dark h5, #main > section.dark h6 {
-					color: inherit;
+					color: white;
 				}
 
 				#main > section.dark strong {
