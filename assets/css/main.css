@@ -1725,6 +1725,14 @@
 			width: 100%;
 		}
 
+		.plannit {
+			background-color: skyblue;
+		}
+
+		.inquir {
+			background-color: black;
+		}
+
 		.image.featured {
 			display: block;
 			width: 100%;
@@ -1950,7 +1958,7 @@
 	}
 
 		.item header {
-			background: #fff;
+			background: #c0c0c0;
 			margin: 0;
 			padding: 1em 0 1em 0;
 			font-size: 0.8em;
@@ -2098,6 +2106,7 @@
 			position: relative;
 			display: block;
 			font-size: 0.8em;
+			color: whitesmoke;
 		}
 
 			#nav ul li a span:before {
@@ -2199,7 +2208,9 @@
 			}
 
 			#main > section.two {
-				background-color: #f5fafa;
+    			background-color: #f5fafa;
+    			font-size: 20pt;
+    			font-weight: 500;
 			}
 
 			#main > section.three {
@@ -2269,6 +2280,10 @@
 			.container {
 				padding: 0 2em 0 2em;
 			}
+
+				.container p {
+    				line-height: 215%;
+				}
 
 		/* List */
 
