@@ -1729,6 +1729,11 @@
 			background-color: skyblue;
 		}
 
+		.plannit-text {
+			padding-top: 53px !important;
+    		padding-bottom: 127px !important;
+		}
+
 		.inquir {
 			background-color: black;
 		}
@@ -1991,7 +1996,7 @@
 		}
 
 	.skill-icon {
-		margin-left: 194px;
+		margin-left: 240px;
 		float: left;
 		padding-bottom: 14px;
 	}
