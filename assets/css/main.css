@@ -1996,9 +1996,9 @@
 		}
 
 	.skill-icon {
-		margin-left: 240px;
+		margin-left: 267px;
 		float: left;
-		padding-bottom: 14px;
+		padding-bottom: 36px;
 	}
 
 	.skill-text {
@@ -2007,15 +2007,19 @@
 	}
 
 	.second-icon {
-		margin-left: 203px
+		margin-left: 232px
 	}
 
 	.fourth-icon {
-		margin-left: 36px;
+		margin-left: 264px;
 	}
 
 	.sixth-icon {
-		margin-left: 356px;
+		margin-left: 235px
+	}
+
+	.eigth-icon {
+		margin-left: 254px;
 	}
 
 /* Header */
