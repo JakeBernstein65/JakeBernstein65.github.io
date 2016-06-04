@@ -2246,6 +2246,12 @@
 				width: 300px;
 			}
 
+		/* Logo image */
+
+			#logo .image {
+				position: relative;
+			}
+
 		/* Footer */
 
 			#footer {
