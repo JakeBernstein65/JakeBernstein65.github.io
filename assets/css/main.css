@@ -2089,7 +2089,7 @@
 		}
 
 		#logo .image {
-			position: absolute;
+			position: relative;
 			left: 0;
 			top: 0;
 		}
@@ -2244,12 +2244,6 @@
 
 			#header {
 				width: 300px;
-			}
-
-		/* Logo image */
-
-			#logo .image {
-				position: relative;
 			}
 
 		/* Footer */
@@ -2547,11 +2541,40 @@
 					padding: 4em 0;
 				}
 
+		/* Skill Icons */
+		.skill-icon {
+			margin-left: 0px;
+		}
+
+		.clear-icon {
+			clear: left;
+			margin-left: 31%;
+			margin-right: 71px;
+		}
+
+		li.icon.fa-code-fork.skill-icon {
+    		margin-left: 14px;
+		}
+
+		li.icon.fa-coffee.skill-icon {
+    		margin-left: 40px;
+		}
+
+
+
+
 	}
 
 /* Mobile */
 
 	@media screen and (max-width: 736px) {
+
+		/* Skill Icons */
+
+			.skill-icon {
+				margin-left: 0px;
+				float: none;
+			}
 
 		/* Basic */
 
