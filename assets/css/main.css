@@ -2552,11 +2552,11 @@
 			margin-right: 71px;
 		}
 
-		li.icon.fa-code-fork.skill-icon {
+		.fa-code-fork {
     		margin-left: 14px;
 		}
 
-		li.icon.fa-coffee.skill-icon {
+		.fa-coffee {
     		margin-left: 40px;
 		}
 
@@ -2573,6 +2573,7 @@
 
 			.skill-icon {
 				margin-left: 0px;
+				margin-right: 0px;
 				float: none;
 			}
 
