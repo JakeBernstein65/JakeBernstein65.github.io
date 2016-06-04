@@ -68,6 +68,9 @@
 						// Set this link to active
 							t.addClass('active');
 
+						//this line prevents the flickering
+							return false;
+
 					});
 
 			// Initialize scrollzer.
